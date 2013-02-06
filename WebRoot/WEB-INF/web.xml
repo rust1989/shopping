@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="2.5" 
 	xmlns="http://java.sun.com/xml/ns/javaee" 
@@ -8,3 +9,35 @@
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+ <filter>
+  <filter-name>AuthFilter</filter-name>
+  <filter-class>com.rust.shopping.util.filter.AuthFilter</filter-class>
+ </filter>
+ <filter>
+  <filter-name>IPFilter</filter-name>
+  <filter-class>com.rust.shopping.util.filter.IPFilter</filter-class>
+  <init-param>
+   <param-name>IPBlackList</param-name>
+   <param-value>192.168.0.16,192.168.0.165</param-value>
+  </init-param>
+ </filter>
+ <filter-mapping>
+  <filter-name>AuthFilter</filter-name>
+  <url-pattern>/admin/*</url-pattern>
+ </filter-mapping>
+ <filter-mapping>
+  <filter-name>IPFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <welcome-file-list>
+  <welcome-file>index.jsp</welcome-file>
+ </welcome-file-list>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>
+>>>>>>> 59b5cb49fc2e2e44fd6fd703a935fe3369c1edf3

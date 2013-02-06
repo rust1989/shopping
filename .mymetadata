@@ -2,9 +2,15 @@
 <project-module
   type="WEB"
   name="Myshopping"
+<<<<<<< HEAD
   id="myeclipse.1360117298463"
   context-root="/Myshopping"
   j2ee-spec="5.0"
+=======
+  id="myeclipse.1359683752656"
+  context-root="/Myshopping"
+  j2ee-spec="1.4"
+>>>>>>> 59b5cb49fc2e2e44fd6fd703a935fe3369c1edf3
   archive="Myshopping.war">
   <attributes>
     <attribute name="webrootdir" value="WebRoot" />

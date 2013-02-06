@@ -7,7 +7,12 @@ public class DB {
 		Connection conn = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
+<<<<<<< HEAD
 			conn = DriverManager.getConnection("jdbc:mysql://localhost/shopping?user=root&password=123456");
+=======
+			conn = DriverManager
+					.getConnection("http://localhost:3306/shopping?user=root&password=123456");
+>>>>>>> 59b5cb49fc2e2e44fd6fd703a935fe3369c1edf3
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -19,9 +24,13 @@ public class DB {
 	public static Statement getStmt(Connection conn){
 		Statement stmt=null;
 		try {
+<<<<<<< HEAD
 			if(conn!=null){
 			stmt=conn.createStatement();
 			}
+=======
+			stmt=conn.createStatement();
+>>>>>>> 59b5cb49fc2e2e44fd6fd703a935fe3369c1edf3
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -30,9 +39,13 @@ public class DB {
 	public static ResultSet getRs(Statement stmt,String sql){
 		ResultSet rs=null;
 		try {
+<<<<<<< HEAD
 			if(stmt!=null){
 			rs=stmt.executeQuery(sql);
 			}
+=======
+			rs=stmt.executeQuery(sql);
+>>>>>>> 59b5cb49fc2e2e44fd6fd703a935fe3369c1edf3
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -49,11 +62,15 @@ public class DB {
 	public static PreparedStatement preStmt(Connection conn,String sql){
 		PreparedStatement pstmt=null;
 		try {
+<<<<<<< HEAD
 			if(conn!=null){
 			pstmt=conn.prepareStatement(sql);
 			}else{
 				System.out.println("db not connect!");
 			}
+=======
+			pstmt=conn.prepareStatement(sql);
+>>>>>>> 59b5cb49fc2e2e44fd6fd703a935fe3369c1edf3
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
